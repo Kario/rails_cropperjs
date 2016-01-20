@@ -7,8 +7,8 @@ require "rails_cropperjs/version"
 Gem::Specification.new do |s|
   s.name        = "rails_cropperjs"
   s.version     = "0.1.0"
-  s.authors     = Drew Kario
-  s.email       = kario@apostrophed.com
+  s.authors     = "Drew Kario"
+  s.email       = "kario@apostrophed.com"
   s.homepage    = "https://github.com/Kario/rails_cropperjs"
   s.summary     = "Paperclip extension using Cropper.js"
   s.description = "An easy extension of paperclip to crop images to multiple sizes and aspect ratios"
