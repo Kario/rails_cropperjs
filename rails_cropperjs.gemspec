@@ -6,7 +6,7 @@ require "rails_cropperjs/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "rails_cropperjs"
-  s.version     = "0.1.0"
+  s.version     = "0.1.1"
   s.authors     = "Drew Kario"
   s.email       = "kario@apostrophed.com"
   s.homepage    = "https://github.com/Kario/rails_cropperjs"
@@ -19,10 +19,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.21"
   s.add_dependency "jquery-rails"
-  s.add_dependency "paperclip", ">= 3.4"
- 
-  s.add_development_dependency "rmagick"
-  s.add_development_dependency "sass"
-  s.add_development_dependency "sqlite3"
+
   
 end
