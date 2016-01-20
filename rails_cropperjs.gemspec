@@ -1,24 +1,28 @@
-$:.push File.expand_path("../lib", __FILE__)
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'rails_cropperjs/version'
 
-# Maintain your gem's version:
-require "rails_cropperjs/version"
+Gem::Specification.new do |spec|
+  spec.name          = "rails_cropperjs"
+  spec.version       = RailsCropperjs::VERSION
+  spec.authors       = ["Drew Kario"]
+  spec.email         = ["kario@apostrophed.com"]
 
-# Describe your gem and declare its dependencies:
-Gem::Specification.new do |s|
-  s.name        = "rails_cropperjs"
-  s.version     = "0.1.1"
-  s.authors     = "Drew Kario"
-  s.email       = "kario@apostrophed.com"
-  s.homepage    = "https://github.com/Kario/rails_cropperjs"
-  s.summary     = "Paperclip extension using Cropper.js"
-  s.description = "An easy extension of paperclip to crop images to multiple sizes and aspect ratios"
+  if spec.respond_to?(:metadata)
+    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
+  end
 
-  
-  s.files = Dir["{app,config,db,lib,vendor}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  spec.summary       = "An easy paperclip cropping utility using cropper.js and paperclip"
+  spec.description   = "Combines cropper.js with paperclip to make cropping of multiple image shapes and sizes"
+  spec.homepage      = "https://github.com/Kario/rails_cropperjs"
+  spec.license       = "MIT"
 
-  s.add_dependency "rails", "~> 3.2.21"
-  s.add_dependency "jquery-rails"
+  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.bindir        = "exe"
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.require_paths = ["lib"]
 
-  
+  spec.add_development_dependency "bundler", "~> 1.8"
+  spec.add_development_dependency "rake", "~> 10.0"
 end
