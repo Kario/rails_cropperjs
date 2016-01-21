@@ -5,7 +5,7 @@ require 'rails_cropperjs/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rails_cropperjs"
-  spec.version       = "0.1.1"
+  spec.version       = RailsCropperjs::VERSION
   spec.authors       = ["Drew Kario"]
   spec.email         = ["kario@apostrophed.com"]
 
